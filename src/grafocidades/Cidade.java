@@ -26,25 +26,35 @@ public class Cidade {
 
 
     public String getNome() {
+
         return nome;
     }
 
     public void setNome(String nome) {
+
         this.nome = nome;
     }
 
     public Boolean getVisitado() {
+
         return visitado;
     }
 
     public void setVisitado(Boolean visitado) {
+
         this.visitado = visitado;
     }
 
     // Metodo getter para buscar o valor dos adjacentes
 
     public List<Adjacente> getAdjacentes() {
+
         return adjacentes;
+    }
+
+    public boolean isVisitado() {
+
+        return visitado;
     }
 }
 
