@@ -9,6 +9,7 @@ public class Profundidade {
     private Pilha fronteira;
     private Cidade inicio;
     private Cidade objetivo;
+    private boolean achou;
 
     public Profundidade (Cidade inicio, Cidade objetivo) {
         this.inicio = inicio;
@@ -17,6 +18,7 @@ public class Profundidade {
 
         fronteira = new Pilha(20); // 20 total da pilha, pois no estudo de caso que estou fazendo são um total de 20 cidades
         fronteira.empilhar(inicio); // cidade inicial é passada para o topo da pilha
+        achou = false;
     }
 
     // Função para fazer a busca no grafo
@@ -24,18 +26,25 @@ public class Profundidade {
         Cidade topo = fronteira.getTopo();
         System.out.println("Topo: " + topo.getNome());
 
+        if (topo == objetivo){
+            achou = true;
+        }
+        else {
         // percorrer adjacentes não visitados do topo da pilha
-        for(Adjacente a: topo.getAdjacentes()) {
-            System.out.println("Verificando se já foi visitado " + a.getCidade().getNome());
-            if (!a.getCidade() .isVisitado()) {
-                a.getCidade() .setVisitado(true);
-                fronteira.empilhar(a.getCidade()); // se a cidade nao foi visitada, ele empilha as cidades adjacentes
-                buscar(); // recusivo, chamar novamente a função para chamar o novo topo da pilha
+            for(Adjacente a: topo.getAdjacentes()) {
+                if (!achou) { // se não achou o objetivo, executa o bloco abaixo
+                    System.out.println("Verificando se já foi visitado " + a.getCidade().getNome());
+                    if (!a.getCidade().isVisitado()) {
+                        a.getCidade().setVisitado(true);
+                        fronteira.empilhar(a.getCidade()); // se a cidade nao foi visitada, ele empilha as cidades adjacentes
+                        buscar(); // recusivo, chamar novamente a função para chamar o novo topo da pilha
+                    }
+                }
             }
         }
+
         // fronteira.desempilhar(); // quando não existe mais cidades adjacentes, ele retira da pilha
         System.out.println("Cidade que Desempilhou: " + fronteira.desempilhar() .getNome());
-
 
     }
 
