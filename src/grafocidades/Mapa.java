@@ -38,82 +38,82 @@ public class Mapa {
         tresBarras = new Cidade("Três Barras", 131);
 
         // Definir as arestas de cidades adjacentes de porto uniao
-        portoUniao.addCidadeAdjacente(new Adjacente(pauloFrontin));
-        portoUniao.addCidadeAdjacente(new Adjacente(canoinhas));
-        portoUniao.addCidadeAdjacente(new Adjacente(saoMateus));
+        portoUniao.addCidadeAdjacente(new Adjacente(pauloFrontin, 46));
+        portoUniao.addCidadeAdjacente(new Adjacente(canoinhas, 78));
+        portoUniao.addCidadeAdjacente(new Adjacente(saoMateus, 87));
 
         // Definir as arestas de cidades adjacentes de paulo frontin
-        pauloFrontin.addCidadeAdjacente(new Adjacente(portoUniao));
-        pauloFrontin.addCidadeAdjacente(new Adjacente(irati));
+        pauloFrontin.addCidadeAdjacente(new Adjacente(portoUniao, 46));
+        pauloFrontin.addCidadeAdjacente(new Adjacente(irati, 75));
 
         // Definir as arestas de cidades adjacentes de canoinhas
-        canoinhas.addCidadeAdjacente(new Adjacente(portoUniao));
-        canoinhas.addCidadeAdjacente(new Adjacente(tresBarras));
-        canoinhas.addCidadeAdjacente(new Adjacente(mafra));
+        canoinhas.addCidadeAdjacente(new Adjacente(portoUniao, 78));
+        canoinhas.addCidadeAdjacente(new Adjacente(tresBarras, 12));
+        canoinhas.addCidadeAdjacente(new Adjacente(mafra, 66));
 
         // Adiciona cidade adjacente Paulo Frontin a Irati
-        irati.addCidadeAdjacente(new Adjacente(pauloFrontin));
-        irati.addCidadeAdjacente(new Adjacente(palmeira));
-        irati.addCidadeAdjacente(new Adjacente(saoMateus));
+        irati.addCidadeAdjacente(new Adjacente(pauloFrontin, 75));
+        irati.addCidadeAdjacente(new Adjacente(palmeira, 75));
+        irati.addCidadeAdjacente(new Adjacente(saoMateus,57));
 
         // Adiciona cidade adjacente Irati a Palmeira
-        palmeira.addCidadeAdjacente(new Adjacente(irati));
-        palmeira.addCidadeAdjacente(new Adjacente(saoMateus));
-        palmeira.addCidadeAdjacente(new Adjacente(campoLargo));
+        palmeira.addCidadeAdjacente(new Adjacente(irati, 75));
+        palmeira.addCidadeAdjacente(new Adjacente(saoMateus, 77));
+        palmeira.addCidadeAdjacente(new Adjacente(campoLargo, 55));
 
         // Adiciona cidade adjacente Palmeira a Campo Largo
-        campoLargo.addCidadeAdjacente(new Adjacente(palmeira));
-        campoLargo.addCidadeAdjacente(new Adjacente(balsaNova));
-        campoLargo.addCidadeAdjacente(new Adjacente(curitiba));
+        campoLargo.addCidadeAdjacente(new Adjacente(palmeira, 55));
+        campoLargo.addCidadeAdjacente(new Adjacente(balsaNova, 22));
+        campoLargo.addCidadeAdjacente(new Adjacente(curitiba, 29));
 
         // Adiciona cidades adjacentes a Curitiba
-        curitiba.addCidadeAdjacente(new Adjacente(campoLargo));
-        curitiba.addCidadeAdjacente(new Adjacente(balsaNova));
-        curitiba.addCidadeAdjacente(new Adjacente(araucaria));
-        curitiba.addCidadeAdjacente(new Adjacente(saoJose));
+        curitiba.addCidadeAdjacente(new Adjacente(campoLargo,29));
+        curitiba.addCidadeAdjacente(new Adjacente(balsaNova,51));
+        curitiba.addCidadeAdjacente(new Adjacente(araucaria,37));
+        curitiba.addCidadeAdjacente(new Adjacente(saoJose,15));
 
         // Adiciona cidades adjacentes a Balsa Nova
-        balsaNova.addCidadeAdjacente(new Adjacente(curitiba));
-        balsaNova.addCidadeAdjacente(new Adjacente(campoLargo));
-        balsaNova.addCidadeAdjacente(new Adjacente(contenda));
+        balsaNova.addCidadeAdjacente(new Adjacente(curitiba,51));
+        balsaNova.addCidadeAdjacente(new Adjacente(campoLargo,22));
+        balsaNova.addCidadeAdjacente(new Adjacente(contenda,19));
 
         // Adiciona cidades adjacentes a Araucária
-        araucaria.addCidadeAdjacente(new Adjacente(curitiba));
-        araucaria.addCidadeAdjacente(new Adjacente(contenda));
+        araucaria.addCidadeAdjacente(new Adjacente(curitiba,37));
+        araucaria.addCidadeAdjacente(new Adjacente(contenda,18));
 
         // Adiciona cidades adjacentes a São Jose
-        saoJose.addCidadeAdjacente(new Adjacente(curitiba));
-        saoJose.addCidadeAdjacente(new Adjacente(tijucas));
+        saoJose.addCidadeAdjacente(new Adjacente(curitiba,15));
+        saoJose.addCidadeAdjacente(new Adjacente(tijucas,49));
 
         // Adiciona cidades adjacentes a Contenda
-        contenda.addCidadeAdjacente(new Adjacente(balsaNova));
-        contenda.addCidadeAdjacente(new Adjacente(araucaria));
-        contenda.addCidadeAdjacente(new Adjacente(lapa));
+        contenda.addCidadeAdjacente(new Adjacente(balsaNova,19));
+        contenda.addCidadeAdjacente(new Adjacente(araucaria,18));
+        contenda.addCidadeAdjacente(new Adjacente(lapa,26));
 
         // Adiciona cidades adjacentes a Mafra
-        mafra.addCidadeAdjacente(new Adjacente(tijucas));
-        mafra.addCidadeAdjacente(new Adjacente(lapa));
-        mafra.addCidadeAdjacente(new Adjacente(canoinhas));
+        mafra.addCidadeAdjacente(new Adjacente(tijucas,99));
+        mafra.addCidadeAdjacente(new Adjacente(lapa,57));
+        mafra.addCidadeAdjacente(new Adjacente(canoinhas,66));
 
         // Adiciona cidades adjacentes a Tijucas
-        tijucas.addCidadeAdjacente(new Adjacente(mafra));
-        tijucas.addCidadeAdjacente(new Adjacente(saoJose));
+        tijucas.addCidadeAdjacente(new Adjacente(mafra,99));
+        tijucas.addCidadeAdjacente(new Adjacente(saoJose,49));
 
         // Adiciona cidades adjacentes a Lapa
-        lapa.addCidadeAdjacente(new Adjacente(contenda));
-        lapa.addCidadeAdjacente(new Adjacente(saoMateus));
-        lapa.addCidadeAdjacente(new Adjacente(mafra));
+        lapa.addCidadeAdjacente(new Adjacente(contenda,26));
+        lapa.addCidadeAdjacente(new Adjacente(saoMateus,60));
+        lapa.addCidadeAdjacente(new Adjacente(mafra,57));
 
         // Adiciona cidades adjacentes a São Mateus
-        saoMateus.addCidadeAdjacente(new Adjacente(palmeira));
-        saoMateus.addCidadeAdjacente(new Adjacente(irati));
-        saoMateus.addCidadeAdjacente(new Adjacente(lapa));
-        saoMateus.addCidadeAdjacente(new Adjacente(tresBarras));
-        saoMateus.addCidadeAdjacente(new Adjacente(portoUniao));
+        saoMateus.addCidadeAdjacente(new Adjacente(palmeira,77));
+        saoMateus.addCidadeAdjacente(new Adjacente(irati,57));
+        saoMateus.addCidadeAdjacente(new Adjacente(lapa,60));
+        saoMateus.addCidadeAdjacente(new Adjacente(tresBarras,43));
+        saoMateus.addCidadeAdjacente(new Adjacente(portoUniao,87));
 
         // Adiciona cidades adjacentes a Tres Barras
-        tresBarras.addCidadeAdjacente(new Adjacente(saoMateus));
-        tresBarras.addCidadeAdjacente(new Adjacente(canoinhas));
+        tresBarras.addCidadeAdjacente(new Adjacente(saoMateus,43));
+        tresBarras.addCidadeAdjacente(new Adjacente(canoinhas,78));
 
     }
 
