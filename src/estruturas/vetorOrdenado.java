@@ -27,6 +27,10 @@ public class VetorOrdenado {
         numeroElementos++;
     }
 
+    public Cidade getPrimeiro() {
+        return cidades[0];
+    }
+
     public void mostrar(){
         for (int i = 0; i < numeroElementos; i++){
             System.out.println(cidades[i].getNome() + " - " + cidades[i].getDistanciaObjetivo());
