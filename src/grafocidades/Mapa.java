@@ -20,22 +20,22 @@ public class Mapa {
 
     // Criar instâncias de todas as cidades
     public Mapa() {
-        portoUniao = new Cidade("Porto União");
-        pauloFrontin = new Cidade("Paulo Frontin");
-        canoinhas = new Cidade("Canoinhas");
-        irati = new Cidade("Irati");
-        palmeira = new Cidade("Palmeira");
-        campoLargo = new Cidade("Campo Largo");
-        curitiba = new Cidade("Curitiba");
-        balsaNova = new Cidade("Balsa Nova");
-        araucaria = new Cidade("Araucária");
-        saoJose = new Cidade("São José dos Pinhais");
-        contenda = new Cidade("Contenda");
-        mafra = new Cidade("Mafra");
-        tijucas = new Cidade("Tijucas do Sul");
-        lapa = new Cidade("Lapa");
-        saoMateus = new Cidade("São Mateus do Sul");
-        tresBarras = new Cidade("Três Barras");
+        portoUniao = new Cidade("Porto União", 230);
+        pauloFrontin = new Cidade("Paulo Frontin", 172);
+        canoinhas = new Cidade("Canoinhas", 141);
+        irati = new Cidade("Irati", 139);
+        palmeira = new Cidade("Palmeira", 59);
+        campoLargo = new Cidade("Campo Largo", 27);
+        curitiba = new Cidade("Curitiba", 0);
+        balsaNova = new Cidade("Balsa Nova", 41);
+        araucaria = new Cidade("Araucária", 23);
+        saoJose = new Cidade("São José dos Pinhais", 13 );
+        contenda = new Cidade("Contenda", 39);
+        mafra = new Cidade("Mafra", 94);
+        tijucas = new Cidade("Tijucas do Sul", 56);
+        lapa = new Cidade("Lapa", 74);
+        saoMateus = new Cidade("São Mateus do Sul", 123);
+        tresBarras = new Cidade("Três Barras", 131);
 
         // Definir as arestas de cidades adjacentes de porto uniao
         portoUniao.addCidadeAdjacente(new Adjacente(pauloFrontin));
