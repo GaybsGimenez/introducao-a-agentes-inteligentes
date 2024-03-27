@@ -31,7 +31,10 @@ public class AEstrela {
             }
 
             fronteira.mostrar();
-            buscar(fronteira.getPrimeiro());
+            if(fronteira.getPrimeiro() != null){
+                buscar(fronteira.getPrimeiro());
+            }
+
         }
     }
 
